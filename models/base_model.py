@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 base_model module
 
@@ -8,7 +9,7 @@ defines all common attributes/methods for other classes:
 
 from datetime import datetime
 import uuid
-from models import storage
+import models
 
 
 class BaseModel:
@@ -26,6 +27,7 @@ class BaseModel:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
+            models.storage.new(self)
 
     def __str__(self):
         """should print: [<class name>] (<self.id>) <self.__dict__>"""
@@ -33,6 +35,7 @@ class BaseModel:
     def save(self):
         """Update the public instance attributes updated at"""
         self.updated_at = datetime.now()
+        models.storage.save()
 
     def to_dict(self):
         """returns a dictionary containing all keys/values

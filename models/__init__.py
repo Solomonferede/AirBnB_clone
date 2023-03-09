@@ -1,11 +1,12 @@
+#!/usr/bin/python3
 """ 
 The models package
 """
 
 
-from models.engine import file_storage
+from models.engine.file_storage import FileStorage
 
 
-storage = file_storage.FileStorage()
+storage = FileStorage()
 print("storage")
 storage.reload()
