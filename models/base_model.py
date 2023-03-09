@@ -32,6 +32,7 @@ class BaseModel:
     def __str__(self):
         """should print: [<class name>] (<self.id>) <self.__dict__>"""
         return "[" + self.__class__.__name__ + "] (" + str(self.id) + ") " + str(self.__dict__)
+
     def save(self):
         """Update the public instance attributes updated at"""
         self.updated_at = datetime.now()
