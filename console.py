@@ -23,6 +23,8 @@ class HBNBCommand(cmd.Cmd):
         """Empty line"""
         pass
 
+    def do_EOF(self):
+        return True
 
 
 
