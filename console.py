@@ -15,9 +15,9 @@ class HBNBCommand(cmd.Cmd):
         """ Change the defult prompt"""
         self.prompt = line
 
-    def do_EOF(self, line):
+    def do_quit(self, line):
         """quit and EOF to exit the program"""
-        return True
+        exit()
 
     def emptyline(self):
         """Empty line"""
