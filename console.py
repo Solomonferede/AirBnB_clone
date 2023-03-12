@@ -16,13 +16,13 @@ class HBNBCommand(cmd.Cmd):
         self.prompt = line
 
     def do_quit(self, line):
-        """quit and EOF to exit the program"""
+        """quit to exit the program"""
         exit()
+
 
     def emptyline(self):
         """Empty line"""
         pass
-
 
 
 
